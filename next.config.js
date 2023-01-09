@@ -3,7 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   images:{
     domains: [
-      "links.papareact.com"
+      "links.papareact.com",
+      "platform-lookaside.fbsbx.com"
     ]
   }
 }
