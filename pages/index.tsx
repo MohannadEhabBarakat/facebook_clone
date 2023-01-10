@@ -6,14 +6,16 @@ import Header from '../components/Header'
 import { getSession } from 'next-auth/react'
 import Login from '../components/Login'
 import { useSession, signIn, signOut } from "next-auth/react"
+import Sidebar from '../components/Sidebar'
+import Stories from '../components/Stories'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const { data: session } = useSession()
   if (!session) return <Login />
-  return (
-    <>
+  return (      
+    <div className='h-screen bg-gray-100 overflow-hidden'>
       <Head>
         <title>Facebook</title>
         <link rel="icon" href="/favicon.ico" />
@@ -21,7 +23,9 @@ export default function Home() {
 
       <Header />
       {/* <Main /> */}
-    </>
+      <Sidebar />
+      <Stories />
+    </div>
   )
 }
 

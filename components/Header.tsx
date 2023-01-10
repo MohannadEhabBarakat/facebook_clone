@@ -49,13 +49,13 @@ function Header():ReactElement{
                 <Image 
                 onClick={()=>signOut()}
                 className='rounded-full cursor-pointer'
-                src={session.user.image}
+                src={session?.user?.image}
                 width={40} 
                 height={40}
                 alt="user"
                 layout='fixed'/>
 
-                <p className=" whitespace-nowrap font-semibold pr-3">{session.user?.name}</p>
+                <p className=" whitespace-nowrap font-semibold pr-3">{session?.user?.name}</p>
                 <HiViewGrid className="icon"/>
                 <BsFillChatDotsFill className="icon"/>
                 <AiFillBell className="icon"/>
