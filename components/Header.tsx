@@ -20,7 +20,7 @@ function Header():ReactElement{
 
     return(
         // flex justify-between
-        <div className=" sticky top-0 z-50 bg-white flex items-center p-2 lg:p-5
+        <div className=" sticky top-0 z-50 bg-white flex items-center p-1 lg:p-3
                          shadow-md w-full">
             {/* left */}
             <div className="flex items-center">
@@ -36,7 +36,7 @@ function Header():ReactElement{
             </div>
             {/* center */}
             <div className="flex justify-center flex-grow">
-                <div className="flex space-x-6 md:space-x-2">
+                <div className="flex space-x-2 md:space-x-6">
                     <HeaderIcon Icon={AiFillHome} active/>
                     <HeaderIcon Icon={AiOutlineFlag} />
                     <HeaderIcon Icon={AiOutlinePlayCircle} />
@@ -45,17 +45,17 @@ function Header():ReactElement{
                 </div>
             </div>
             {/* right */}
-            <div className="flex items-center sm:space-x-2 justify-end">
+            <div className="flex items-center sm:space-x-1 justify-end">
                 <Image 
                 onClick={()=>signOut()}
                 className='rounded-full cursor-pointer'
                 src={session?.user?.image}
-                width={40} 
-                height={40}
+                width={25} 
+                height={25}
                 alt="user"
                 layout='fixed'/>
 
-                <p className=" whitespace-nowrap font-semibold pr-3">{session?.user?.name}</p>
+                <p className=" whitespace-nowrap font-semibold pr-3 cursor-pointer" onClick={()=>signOut()}>{session?.user?.name}</p>
                 <HiViewGrid className="icon"/>
                 <BsFillChatDotsFill className="icon"/>
                 <AiFillBell className="icon"/>
