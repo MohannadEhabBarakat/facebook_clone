@@ -8,6 +8,7 @@ import Login from '../components/Login'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Sidebar from '../components/Sidebar'
 import Stories from '../components/Stories'
+import Feed from '../components/Feed'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +16,7 @@ export default function Home() {
   const { data: session } = useSession()
   if (!session) return <Login />
   return (      
-    <div className='h-screen bg-gray-100 overflow-hidden'>
+    <div className='h-screen flex flex-col bg-gray-100 overflow-hidden'>
       <Head>
         <title>Facebook</title>
         <link rel="icon" href="/favicon.ico" />
@@ -23,8 +24,12 @@ export default function Home() {
 
       <Header />
       {/* <Main /> */}
-      <Sidebar />
-      <Stories />
+      <div className='flex flex-row justify-between w-screen overflow-x-hidden'>
+        <Sidebar />
+        <Feed />
+        <div className='hidden md:block'><Sidebar /></div>
+
+      </div>
     </div>
   )
 }
