@@ -34,8 +34,8 @@ function Stories():ReactElement{
     return(
         <div className="flex justify-center p-5 space-x-3 mx-auto overflow-x-scroll scrollbar-hide h-auto overflow-y-hidden">
             {
-            stories.map((story)=>{
-                return <StoryCard name={story.name} src={story.src} profile={story.profile}/>
+            stories.map((story, index)=>{
+                return <StoryCard key={index} name={story.name} src={story.src} profile={story.profile}/>
             })
             }
         </div>
