@@ -62,7 +62,7 @@ function Post({name, massage, email, timestamp, image, postImage}:post):ReactEle
                 </div>
 
                 <div className="flex flex-row items-center justify-center w-4/12 m-1 p-2 rounded-md cursor-pointer hover:bg-gray-100">
-                    <BiShare className=" rotate"/>
+                    <BiShare className="scale-x-[-1]"/>
                     <button className="ml-1 hidden sm:inline-flex">Share</button>
                 </div>
             </div>

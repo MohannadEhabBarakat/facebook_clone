@@ -13,7 +13,7 @@ function Sidebar():ReactElement{
     const { data: session } = useSession()
 
     return(
-        <div className="p-2 mt-5 flex flex-col w-2/12 max-w-[600px] xl:min-w-[200px]">
+        <div className="p-2 mt-5 hidden flex-col w-2/12 max-w-[600px] xl:min-w-[200px] sm:flex">
             <SidebarRow src={session?.user?.image} title={session?.user?.name}/>
             <SidebarRow Icon={BsPeopleFill} title="Freinds"/>
             <SidebarRow Icon={IoIosPeople} title="Groups"/>

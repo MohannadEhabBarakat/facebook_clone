@@ -25,7 +25,7 @@ function SidebarRow({src, Icon, title}:SidebarRowType):ReactElement{
             {Icon &&(
                 <Icon className="h-6 w-6 text-blue-500" />
             )}
-            <p className="hidden sm:inline-flex font-medium">{title}</p>
+            <p className="hidden md:inline-flex font-medium">{title}</p>
 
         </div>
     )

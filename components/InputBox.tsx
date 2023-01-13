@@ -109,7 +109,7 @@ function InputBox():ReactElement{
                
             </div>
             <hr className="w-full mt-4"/>
-            <div className="flex flex-row w-full justify-between pl-10 mt-2">
+            <div className="flex flex-col lg:flex-row w-full justify-between lg:pl-10 mt-2">
                 <div className="p-2 rounded-xl flex flex-row flex-grow items-center justify-center cursor-pointer hover:bg-gray-100">
                     <AiTwotoneVideoCamera className=" text-red-500"/>
                     <p className="text-xs ml-2 sm:text-sm xl:text-base">Live video</p>

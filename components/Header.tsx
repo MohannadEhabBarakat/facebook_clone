@@ -20,7 +20,7 @@ function Header():ReactElement{
 
     return(
         // flex justify-between
-        <div className=" sticky top-0 z-50 bg-white flex items-center p-1 lg:p-3
+        <div className=" sticky top-0 z-50 bg-white flex justify-between sm:items-center p-1 lg:p-3
                          shadow-md w-full">
             {/* left */}
             <div className="flex items-center">
@@ -35,7 +35,10 @@ function Header():ReactElement{
                 </div>
             </div>
             {/* center */}
-            <div className="flex justify-center flex-grow">
+            {/* <div className="flex  justify-center flex-grow">
+                <HeaderIcon Icon={AiFillHome} active/>
+            </div> */}
+            <div className="hidden sm:flex justify-center flex-grow">
                 <div className="flex space-x-2 md:space-x-6">
                     <HeaderIcon Icon={AiFillHome} active/>
                     <HeaderIcon Icon={AiOutlineFlag} />
@@ -55,7 +58,7 @@ function Header():ReactElement{
                 alt="user"
                 layout='fixed'/>
 
-                <p className=" whitespace-nowrap font-semibold pr-3 cursor-pointer" onClick={()=>signOut()}>{session?.user?.name}</p>
+                <p className="hidden sm:flex whitespace-nowrap font-semibold pr-3 cursor-pointer" onClick={()=>signOut()}>{session?.user?.name}</p>
                 <HiViewGrid className="icon"/>
                 <BsFillChatDotsFill className="icon"/>
                 <AiFillBell className="icon"/>
