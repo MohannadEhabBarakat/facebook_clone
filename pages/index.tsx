@@ -9,6 +9,7 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import Sidebar from '../components/Sidebar'
 import Stories from '../components/Stories'
 import Feed from '../components/Feed'
+import Widgets from '../components/Widgets'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,8 +28,7 @@ export default function Home() {
       <div className='flex flex-row justify-between w-screen overflow-x-hidden'>
         <Sidebar />
         <Feed />
-        <div className='hidden md:block'><Sidebar /></div>
-
+        <Widgets />
       </div>
     </div>
   )
