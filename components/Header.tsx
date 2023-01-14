@@ -35,9 +35,7 @@ function Header():ReactElement{
                 </div>
             </div>
             {/* center */}
-            {/* <div className="flex  justify-center flex-grow">
-                <HeaderIcon Icon={AiFillHome} active/>
-            </div> */}
+           
             <div className="hidden sm:flex justify-center flex-grow">
                 <div className="flex space-x-2 md:space-x-6">
                     <HeaderIcon Icon={AiFillHome} active/>

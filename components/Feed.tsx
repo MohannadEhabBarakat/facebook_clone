@@ -7,7 +7,7 @@ import Posts from "./posts";
 function Feed():ReactElement{
 
     return(
-        <div className="flex-grow h-screen pb-44 flex-row mt-10 w-8/12">
+        <div className="flex-grow h-screen pb-44 flex-row mt-10 w-full sm:w-8/12">
             <div><Stories /></div>
             <InputBox />
             <Posts />

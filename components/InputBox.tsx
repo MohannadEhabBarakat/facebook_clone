@@ -82,7 +82,7 @@ function InputBox():ReactElement{
 
 
     return(
-        <div className="mt-5 w-8/12 p-4 block mx-auto items-center rounded-2xl
+        <div className="mt-5 w-10/12 sm:w-8/12 p-4 block mx-auto items-center rounded-2xl
                          text-gray-500 shadow-md bg-white">
             <div className="flex flex-row w-full items-center">
                 <Image 

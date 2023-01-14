@@ -19,7 +19,7 @@ function Posts():ReactElement{
     return(
         
 
-        <div className="mt-5 w-8/12 block mx-auto items-center">
+        <div className="mt-5 w-11/12 sm:w-8/12 block mx-auto items-center">
         {
             realtimePosts?.docs.map(post=>{
                 
