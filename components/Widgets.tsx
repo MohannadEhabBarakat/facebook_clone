@@ -10,8 +10,13 @@ function Widgets():ReactElement{
     const friends = [
         {
             name:"Noha Magdy",
-            image:session?.user?.image,
+            image:"https://scontent.fcai19-6.fna.fbcdn.net/v/t1.6435-9/159521957_2348253638651389_8317824226829883503_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=Q2UpnJxQIJ0AX-dK5bc&_nc_ht=scontent.fcai19-6.fna&oh=00_AfBKESCZWaEBgqE8AlH1E0q5TEmE_0Wd-_V1UZvrdGmpig&oe=63EB886D",
             status:true
+        },
+        {
+            name:"Ibrahem el-kedwany",
+            image:"https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/306052011_209367944768940_5116915325040705202_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=YZOxgnwW-PoAX8HbblG&_nc_ht=scontent.fcai19-6.fna&oh=00_AfAzAp2V2fiM8QOr4I1_HWbx80Lp9Db9XIi73V_V-j4s2A&oe=63C84734",
+            status:false
         }
     ]
     return(
@@ -27,7 +32,7 @@ function Widgets():ReactElement{
             
             { friends.map((friend)=>{
                 
-                return <Chat online={true} src={friend.image} name={friend.name}/>
+                return <Chat online={friend.status} src={friend.image} name={friend.name}/>
             
             })}
         </div>

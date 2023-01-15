@@ -5,14 +5,14 @@ import StoryCard from "./StoryCard";
 function Stories():ReactElement{
     const stories = [
         {
-            name:"Sonny Songha",
-            src:"https://links.papareact.com/zof",
-            profile:"https://links.papareact.com/l4v"
+            name:"Noha Magdy",
+            src:"https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/241800968_2512213328922085_7874113912570881251_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=W9MDJdUzWewAX-J0GFI&_nc_ht=scontent.fcai19-6.fna&oh=00_AfB6_P8FRuUQX75HH6UNfMk2hP7kkSpNChP6_4LeEX6mRQ&oe=63C8D371",
+            profile:"https://scontent.fcai19-6.fna.fbcdn.net/v/t1.6435-9/159521957_2348253638651389_8317824226829883503_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=Q2UpnJxQIJ0AX-dK5bc&_nc_ht=scontent.fcai19-6.fna&oh=00_AfBKESCZWaEBgqE8AlH1E0q5TEmE_0Wd-_V1UZvrdGmpig&oe=63EB886D"
         },
         {
-            name:"Elon Musk",
-            src:"https://links.papareact.com/4za",
-            profile:"https://links.papareact.com/kxk"
+            name:"Ibrahem el-kedwany",
+            src:"https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/268986625_154271766945225_709565031694774137_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=tPz1zrSnqpgAX_4WoiT&_nc_ht=scontent.fcai19-6.fna&oh=00_AfCUNJxibUP2KqXY8eMjCaZOVaTUZLqjaM61IZr00kY3cg&oe=63C86B37",
+            profile:"https://scontent.fcai19-6.fna.fbcdn.net/v/t39.30808-6/306052011_209367944768940_5116915325040705202_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=YZOxgnwW-PoAX8HbblG&_nc_ht=scontent.fcai19-6.fna&oh=00_AfAzAp2V2fiM8QOr4I1_HWbx80Lp9Db9XIi73V_V-j4s2A&oe=63C84734"
         },
         {
             name:"Jeff Bazoz",

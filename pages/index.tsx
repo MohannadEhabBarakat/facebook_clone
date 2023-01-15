@@ -20,7 +20,7 @@ export default function Home() {
     <div className='h-screen flex flex-col bg-gray-100 overflow-hidden'>
       <Head>
         <title>Facebook</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <Header />
