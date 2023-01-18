@@ -46,7 +46,7 @@ function Header():ReactElement{
             {/* right */}
             <div className="flex items-center sm:space-x-1 justify-end">
                 <Image 
-                onClick={()=>signOut()}
+                
                 className='rounded-full cursor-pointer'
                 src= "https://scontent.fcai19-6.fna.fbcdn.net/v/t1.6435-9/75262194_10219189753709080_2516605472564314112_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=c5gncIVfB0sAX96wYXa&_nc_ht=scontent.fcai19-6.fna&oh=00_AfBofWN6ERz2TZiUV36wdM5yVwGVSzUeuXkn5WFn3KFVMg&oe=63EFA5FD"
                 width={25} 

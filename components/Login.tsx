@@ -12,7 +12,7 @@ function Login():ReactElement{
                 className="block m-auto"
                 />
 
-            <button onClick={() => signIn()} className='w-64 block m-auto mt-8 border-b-2 hover:text-gray-700'>Sign in</button>
+            <button  className='w-64 block m-auto mt-8 border-b-2 hover:text-gray-700'>Sign in</button>
         </div>
     )
 }

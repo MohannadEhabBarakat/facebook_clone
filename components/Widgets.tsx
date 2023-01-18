@@ -2,7 +2,7 @@ import React, {ReactElement}  from "react";
 import Image from "next/image";
 import { AiTwotoneVideoCamera, AiOutlineSearch } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
-import Chat from "./chat";
+import Chat from "./Chat";
 
 function Widgets():ReactElement{
     const friends = [
