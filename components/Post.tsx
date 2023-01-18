@@ -44,8 +44,8 @@ function Post({name, massage, email, timestamp, image, postImage}:post):ReactEle
 
             {postImage && (
                 <Image src={postImage}
-                 width={40}
-                 height={40}
+                 width={400}
+                 height={400}
                  alt="post image"
                  className="w-auto"/>
             )}

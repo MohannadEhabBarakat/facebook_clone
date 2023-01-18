@@ -2,7 +2,7 @@ import React, {ReactElement}  from "react";
 import Image from "next/image";
 import Stories from "./Stories";
 import InputBox from "./InputBox";
-import Posts from "./posts";
+import Posts from "./Posts";
 
 function Feed():ReactElement{
 
