@@ -15,7 +15,18 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const { data: session } = useSession()
-  if (!session) return <Login />
+  if (!session) {
+    return (
+      <>
+      <Head>
+        <title>Facebook</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      <Login />
+      </>
+    )
+  
+  }
   return (      
     <div className='h-screen flex flex-col bg-gray-100 overflow-hidden'>
       <Head>
