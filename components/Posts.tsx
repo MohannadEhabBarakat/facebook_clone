@@ -1,14 +1,12 @@
 // 'use client';
 
 import React, {ReactElement}  from "react";
-import { useSession } from "next-auth/react"
 import { useCollection } from 'react-firebase-hooks/firestore'
 import { db, storage } from '../firebase';
 import { collection, orderBy, query } from "firebase/firestore";
 import Post from "./Post";
 
 function Posts():ReactElement{
-    const { data: session } = useSession()
     const [realtimePosts, loading, error] = useCollection(
         query(collection(db, "posts"), orderBy('timestamp', 'desc'))
     )

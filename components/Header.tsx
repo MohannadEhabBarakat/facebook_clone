@@ -12,11 +12,9 @@ import { HiUserGroup,
 import { BsFillChatDotsFill} from "react-icons/bs";
 import { RiArrowDropDownLine} from "react-icons/ri";
 import HeaderIcon from "./HeaderIcon";
-import { useSession, signIn, signOut } from "next-auth/react"
 
 
 function Header():ReactElement{
-    const { data: session, status } = useSession();
 
     return(
         // flex justify-between
@@ -50,13 +48,13 @@ function Header():ReactElement{
                 <Image 
                 onClick={()=>signOut()}
                 className='rounded-full cursor-pointer'
-                src={session?.user?.image}
+                src= "https://scontent.fcai19-6.fna.fbcdn.net/v/t1.6435-9/75262194_10219189753709080_2516605472564314112_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=c5gncIVfB0sAX96wYXa&_nc_ht=scontent.fcai19-6.fna&oh=00_AfBofWN6ERz2TZiUV36wdM5yVwGVSzUeuXkn5WFn3KFVMg&oe=63EFA5FD"
                 width={25} 
                 height={25}
                 alt="user"
                 layout='fixed'/>
 
-                <p className="hidden sm:flex whitespace-nowrap font-semibold pr-3 cursor-pointer" onClick={()=>signOut()}>{session?.user?.name}</p>
+                <p className="hidden sm:flex whitespace-nowrap font-semibold pr-3 cursor-pointer">Mohannad Barakat</p>
                 <HiViewGrid className="icon"/>
                 <BsFillChatDotsFill className="icon"/>
                 <AiFillBell className="icon"/>

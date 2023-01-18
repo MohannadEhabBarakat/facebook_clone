@@ -1,6 +1,5 @@
 import React, {ReactElement}  from "react";
 import Image from "next/image";
-import { useSession, signIn, signOut } from "next-auth/react"
 
 function Login():ReactElement{
     return (

@@ -1,7 +1,6 @@
 'use client';
 import React, {ReactElement, useRef, useState}  from "react";
 import Image from "next/image";
-import { useSession, signIn, signOut } from "next-auth/react"
 import { AiTwotoneVideoCamera,
          AiFillCamera,
          AiOutlineSmile } from "react-icons/ai";
@@ -10,13 +9,13 @@ import { collection, addDoc, serverTimestamp, updateDoc } from "firebase/firesto
 import { ref, getDownloadURL, uploadString } from "firebase/storage"; 
 
 
-async function updateDB({inputRef, session, imageToPost}) {
+async function updateDB({inputRef, imageToPost}) {
     console.log("updateDB")
     const docRef = await addDoc(collection(db, "posts"), {
         massage: inputRef.current.value,
-        name: session?.user?.name,
-        email: session?.user?.email,
-        image: session?.user?.image,
+        name: "Mohannad Barakat",
+        email: "M.barakat@nu.edu.eg",
+        image: "https://scontent.fcai19-6.fna.fbcdn.net/v/t1.6435-9/75262194_10219189753709080_2516605472564314112_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=c5gncIVfB0sAX96wYXa&_nc_ht=scontent.fcai19-6.fna&oh=00_AfBofWN6ERz2TZiUV36wdM5yVwGVSzUeuXkn5WFn3KFVMg&oe=63EFA5FD",
         timestamp: serverTimestamp()
       });
 
@@ -40,7 +39,6 @@ async function updateDB({inputRef, session, imageToPost}) {
 }
 
 function InputBox():ReactElement{
-    const { data: session, status } = useSession();
     const inputRef = useRef(null);
     const imageRef = useRef(null);
     const [imageToPost, setImageToPost] = useState(null);
@@ -49,7 +47,7 @@ function InputBox():ReactElement{
         console.log("sendPost")
 
         e.preventDefault()
-        updateDB({inputRef, session, imageToPost})
+        updateDB({inputRef, imageToPost})
         removeImage()
         console.log("sendPost2")
 
@@ -86,7 +84,7 @@ function InputBox():ReactElement{
                          text-gray-500 shadow-md bg-white">
             <div className="flex flex-row w-full items-center">
                 <Image 
-                    src={session?.user?.image}
+                    src="https://scontent.fcai19-6.fna.fbcdn.net/v/t1.6435-9/75262194_10219189753709080_2516605472564314112_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=c5gncIVfB0sAX96wYXa&_nc_ht=scontent.fcai19-6.fna&oh=00_AfBofWN6ERz2TZiUV36wdM5yVwGVSzUeuXkn5WFn3KFVMg&oe=63EFA5FD"
                     width={30} 
                     height={30}
                     alt="profile"
@@ -94,7 +92,7 @@ function InputBox():ReactElement{
                     />
                 <form className="w-full">
                     <input className="w-full rounded-full bg-gray-100 p-2 placeholder-gray-500 ml-2 outline-none" 
-                        type="text" placeholder={"What's on your mind "+session?.user?.name+"?"}
+                        type="text" placeholder={"What's on your mind Mohannad Barakat?"}
                         ref={inputRef}></input>
                     <button className="hidden" type="submit" onClick={(e)=>{sendPost(e)}}></button>
                 </form>
