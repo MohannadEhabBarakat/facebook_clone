@@ -12,7 +12,7 @@ import { HiUserGroup,
 import { BsFillChatDotsFill} from "react-icons/bs";
 import { RiArrowDropDownLine} from "react-icons/ri";
 import HeaderIcon from "./HeaderIcon";
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useSession, signOut } from "next-auth/react"
 
 
 function Header():ReactElement{

@@ -1,5 +1,4 @@
 import React, {ReactElement}  from "react";
-import Image from "next/image";
 import StoryCard from "./StoryCard";
 
 function Stories():ReactElement{

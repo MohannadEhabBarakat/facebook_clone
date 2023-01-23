@@ -1,7 +1,7 @@
 'use client';
 import React, {ReactElement, useRef, useState}  from "react";
 import Image from "next/image";
-import { useSession, signIn, signOut } from "next-auth/react"
+import { useSession } from "next-auth/react"
 import { AiTwotoneVideoCamera,
          AiFillCamera,
          AiOutlineSmile } from "react-icons/ai";

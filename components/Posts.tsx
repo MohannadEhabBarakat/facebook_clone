@@ -1,10 +1,7 @@
 // 'use client';
 
 import React, { ReactElement } from "react";
-import { useCollection } from "react-firebase-hooks/firestore";
-import { db } from "../firebase";
 import { getPosts } from "../services/firebase";
-import { collection, orderBy, query } from "firebase/firestore";
 import Post from "./Post";
 
 function Posts(): ReactElement {
