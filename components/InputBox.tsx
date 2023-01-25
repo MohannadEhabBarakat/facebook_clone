@@ -16,7 +16,7 @@ import {
 } from "firebase/firestore";
 import { ref, getDownloadURL, uploadString } from "firebase/storage";
 
-async function updateDB({ inputRef, session, imageToPost }) {
+async function updateDB({ inputRef, session, imageToPost }: any) {
   console.log("updateDB");
   const docRef = await addDoc(collection(db, "posts"), {
     massage: inputRef.current.value,
@@ -47,10 +47,10 @@ async function updateDB({ inputRef, session, imageToPost }) {
 function InputBox(): ReactElement {
   const { data: session, status } = useSession();
   const inputRef = useRef(null);
-  const imageRef = useRef(null);
-  const [imageToPost, setImageToPost] = useState(null);
+  const imageRef = useRef<HTMLInputElement>(null);
+  const [imageToPost, setImageToPost] = useState<string | ArrayBuffer | null>(null);
 
-  const sendPost = (e) => {
+  const sendPost = (e: any) => {
     console.log("sendPost");
 
     e.preventDefault();
@@ -59,15 +59,16 @@ function InputBox(): ReactElement {
     console.log("sendPost2");
   };
 
-  const addImageToPost = (e) => {
+  const addImageToPost = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log("addImageToPost");
     const reader = new FileReader();
 
-    if (e.target.files[0]) {
+    if (e?.target?.files?.[0]) {
       reader.readAsDataURL(e.target.files[0]);
 
       reader.onload = (readerEvent) => {
-        setImageToPost(readerEvent.target.result);
+        if (readerEvent.target?.result)
+          setImageToPost(readerEvent.target.result);
       };
     }
     console.log("addImageToPost2");
@@ -86,13 +87,13 @@ function InputBox(): ReactElement {
                          text-gray-500 shadow-md bg-white"
     >
       <div className="flex flex-row w-full items-center">
-        <Image
+        {session?.user?.image && <Image
           src={session?.user?.image}
           width={30}
           height={30}
           alt="profile"
           className="rounded-full w-8 h-8"
-        />
+        />}
         <form className="w-full">
           <input
             className="w-full rounded-full bg-gray-100 p-2 placeholder-gray-500 ml-2 outline-none"
@@ -114,11 +115,11 @@ function InputBox(): ReactElement {
             className="flex flex-col cursor-pointer
                         filter hover:brightness-110 transition duration-150 transform hover:scale-105 m-4"
           >
-            <img
+            {typeof imageToPost === 'string' && <img
               src={imageToPost}
               alt="ImageToPost"
               className="h-10 object-contain"
-            />
+            />}
             <p className=" text-xs text-center text-red-500">remove</p>
           </div>
         )}

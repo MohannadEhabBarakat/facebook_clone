@@ -26,7 +26,7 @@ function Post({
   postImage,
 }: post): ReactElement {
   // function Post():ReactElement{
-  let options = {
+  let options: Intl.DateTimeFormatOptions = {
     weekday: "long",
     year: "numeric",
     month: "long",

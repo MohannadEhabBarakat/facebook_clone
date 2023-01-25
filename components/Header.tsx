@@ -53,7 +53,7 @@ function Header(): ReactElement {
       </div>
       {/* right */}
       <div className="flex items-center sm:space-x-1 justify-end">
-        <Image
+        {session?.user?.image && <Image
           onClick={() => signOut()}
           className="rounded-full cursor-pointer"
           src={session?.user?.image}
@@ -61,7 +61,7 @@ function Header(): ReactElement {
           height={25}
           alt="user"
           layout="fixed"
-        />
+        />}
 
         <p
           className="hidden sm:flex whitespace-nowrap font-semibold pr-3 cursor-pointer"
